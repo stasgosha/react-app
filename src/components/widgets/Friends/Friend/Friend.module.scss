@@ -1,0 +1,16 @@
+.Friend {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  .avatar{
+	flex: none;
+	margin-bottom: 8px;
+  }
+
+  .name{
+	text-align: center;
+	font-size: 14px;
+  }
+}

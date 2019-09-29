@@ -1,0 +1,21 @@
+// Params
+$t: .3s; // default transition
+$gutters: 16px; // box inner padding and gutters
+$r: 8px; // default border-radius
+$shadow: 0 1px rgba(#000, .1),
+          0 -1px rgba(#000, .1),
+          1px 0 rgba(#000, .1),
+          -1px 0 rgba(#000, .1);
+
+// Colors
+$lightblue: #347de0;
+$green: #46c840;
+
+$primary: $lightblue;
+$accent: $green;
+
+$dark: #2c2c2c;
+$gray: #585858;
+
+$text-color: $gray;
+$text-dark: $dark;

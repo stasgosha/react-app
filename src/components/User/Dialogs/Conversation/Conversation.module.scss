@@ -1,0 +1,50 @@
+@import "../../../variables";
+
+.Conversation {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .messagesArea {
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex: auto;
+
+	.item {
+	  margin-bottom: 16px;
+
+	  &:last-child {
+		margin-bottom: 0;
+	  }
+	}
+  }
+
+  .newMessageArea {
+	flex: none;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	border-top: 1px solid #ccc;
+
+	.textareaWrapper{
+	  textarea{
+		border-radius: $r;
+		resize: none;
+		width: 100%;
+		height: 60px;
+		display: block;
+		margin-bottom: 8px;
+		outline: none !important;
+		padding: 8px;
+		color: $text-dark;
+	  }
+	}
+
+	.sendButtonWrapper{
+	  display: flex;
+	  justify-content: flex-end;
+	}
+  }
+}

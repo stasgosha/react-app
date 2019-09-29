@@ -1,0 +1,20 @@
+@import "../variables";
+
+.Header {
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0 1px rgba(#000, .1);
+
+  .headerInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + 15px * 2);
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .headerBlock {
+      padding: 0 15px;
+    }
+  }
+}

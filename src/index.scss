@@ -1,0 +1,83 @@
+@import "components/variables";
+@import "components/_typography";
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.white-card {
+  padding: $gutters;
+  border-radius: $r;
+  background: #fff;
+  box-shadow: $shadow;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Forms
+.form-field{
+  .input-field,
+  .textarea{
+    border: 1px solid #ccc;
+    height: 44px;
+    width: 100%;
+    font-size: 16px;
+    outline: none !important;
+    transition: all $t;
+    background: transparent;
+    color: $text-dark;
+    border-radius: $r;
+    padding: 0 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+
+    &::placeholder{
+      color: $text-color;
+      transition: all $t;
+    }
+
+    &:focus{
+      border-color: $primary;
+    }
+  }
+
+  .textarea{
+    height: 75px;
+    resize: none;
+    padding: 16px;
+  }
+
+  .note{
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+    color: $text-color;
+    margin-top: 5px;
+    padding-left: 10px;
+  }
+}
+
+.form{
+  .form-row{
+    margin-bottom: 8px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &.big-margin{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// Assist
+.flex-right{
+  display: flex;
+  justify-content: flex-end;
+}

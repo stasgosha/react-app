@@ -1,0 +1,43 @@
+@import "../../variables";
+
+.SidebarNav {
+  list-style: none;
+  padding: 0;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-right: -16px;
+
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      font-weight: 500;
+      color: $text-color;
+      text-decoration: none;
+      transition: all $t;
+
+      .linkIcon {
+        flex: none;
+        margin-right: 8px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .linkText {
+        display: block;
+      }
+
+      &:hover {
+        //color: $primary;
+        background: #f3f3f3;
+      }
+
+      &.active{
+        color: $primary;
+      }
+    }
+  }
+}

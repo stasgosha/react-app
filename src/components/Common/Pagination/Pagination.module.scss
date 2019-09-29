@@ -1,0 +1,14 @@
+@import "../../variables";
+
+.Pagination {
+  display: flex;
+
+  .paginationItem {
+	margin-right: 10px;
+	cursor: pointer;
+
+	&.active {
+	  font-weight: bold;
+	}
+  }
+}

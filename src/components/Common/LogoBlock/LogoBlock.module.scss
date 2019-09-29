@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.LogoBlock {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  img {
+    height: 40px;
+    display: block;
+    width: auto;
+    flex: none;
+    transition: all calc(#{$t} * 3);
+  }
+
+  span {
+    font-size: 20px;
+    line-height: 24px;
+    color: #333;
+  }
+
+  &:hover{
+    img{
+      transform: rotate(360deg);
+    }
+  }
+}

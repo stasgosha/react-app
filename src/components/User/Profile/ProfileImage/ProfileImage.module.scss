@@ -1,0 +1,9 @@
+@import "../../../variables";
+
+.ProfileImage {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: $r $r 0 0;
+}

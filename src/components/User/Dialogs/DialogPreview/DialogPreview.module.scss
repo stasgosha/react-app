@@ -1,0 +1,61 @@
+@import "../../../variables";
+
+.DialogPreview{
+  padding: 16px;
+  cursor: pointer;
+  transition: all $t;
+  display: flex;
+  align-items: center;
+  color: $text-color;
+  position: relative;
+
+  &:after{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $primary;
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 3px);
+    opacity: 0;
+    transition: all $t;
+    transform: translateX(30px);
+  }
+
+  .previewAvatar{
+    margin-right: 16px;
+    flex: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  .previewContent{
+    flex: auto;
+
+    .unread{
+      font-weight: bold;
+    }
+  }
+
+  .previewName{}
+
+  .previewMessage{
+    max-height: 3em;
+    overflow: hidden;
+  }
+
+  &:hover{
+    background: #f3f3f3;
+  }
+  
+  &.active{
+    background: #f3f3f3;
+
+    &:after{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

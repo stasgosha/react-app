@@ -1,0 +1,20 @@
+@import "../../../variables";
+
+.userCard {
+  display: flex;
+  align-items: center;
+
+  .cardAvatar {
+	margin-right: 16px;
+	flex: none;
+  }
+
+  .cardContent{
+	.userName,
+	.userStatus{
+	  margin-bottom: 8px;
+	}
+
+	.userActions{}
+  }
+}

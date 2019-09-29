@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.usersPage{
+
+}
+
+.usersList{
+  .item{
+	padding: 16px 0;
+	border-bottom: 1px solid #ddd;
+
+	&:first-child{
+	  padding-top: 0;
+	}
+
+	&:last-child {
+	  border-bottom: 0;
+	  padding-bottom: 0;
+	}
+  }
+}

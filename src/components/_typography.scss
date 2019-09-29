@@ -1,0 +1,114 @@
+// Typography
+body {
+  font-size: 16px;
+  line-height: 24px;
+  color: $text-color;
+}
+
+a{
+  transition: all $t;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,
+.tpg-h1,.tpg-h2,.tpg-h3,.tpg-h4,.tpg-h5,.tpg-h6{
+  color: $text-dark;
+}
+
+.tpg p,
+body .tpg-body-1,
+.tpg-note {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tpg-small{
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.tpg {
+  .text-uppercase {
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+}
+
+body .tpg-body-2 {
+  font-weight: bold;
+}
+
+.tpg h1,
+body .tpg-h1 {
+  font-size: 42px;
+  line-height: 1;
+  margin: 0 0 25px;
+  font-weight: 700;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tpg h3,
+body .tpg-h3 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 0 0 1.25em;
+  font-weight: 500;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.tpg h4,
+body .tpg-h4 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  font-weight: 500;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.tpg h5,
+body .tpg-h5 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0 0 5px;
+  font-weight: 700;
+  color: $text-dark;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

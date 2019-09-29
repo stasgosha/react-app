@@ -1,0 +1,18 @@
+.FriendsWidget {
+
+  .friendsList {
+	display: flex;
+	width: calc(100% + 8px * 2);
+	margin-left: -8px;
+	margin-right: -8px;
+	flex-wrap: wrap;
+	margin-bottom: -16px;
+
+	.item {
+	  padding: 0 8px;
+	  width: 50%;
+	  margin-bottom: 16px;
+	}
+  }
+
+}
