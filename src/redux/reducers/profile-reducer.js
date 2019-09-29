@@ -50,12 +50,12 @@ const profileReducer = (state = initialState, action) => {
 	}
 }
 
-export const addPostAC = () => ({
+export const onAddPost = () => ({
 	type: ADD_POST,
 	avatar: '//placeimg.com/100/100/people?v=1'
 })
 
-export const onPostTextChangeAC = newText => ({
+export const onPostTextChange = newText => ({
 	type: UPDATE_NEW_POST_TEXT,
 	newText: newText
 })

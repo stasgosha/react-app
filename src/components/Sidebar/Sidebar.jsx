@@ -19,10 +19,6 @@ let mstp = (state) => {
 	}
 }
 
-let mdtp = (dispatch) => {
-	return {}
-}
-
-const SidebarContainer = connect(mstp, mdtp)(Sidebar);
+const SidebarContainer = connect(mstp, {})(Sidebar);
 
 export default SidebarContainer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import AddPost from "./AddPost";
-import {addPostAC, onPostTextChangeAC} from "../../../../redux/reducers/profile-reducer";
+import {onAddPost, onPostTextChange} from "../../../../redux/reducers/profile-reducer";
 
 let mapStateToProps = state => {
 	return {
@@ -9,18 +9,10 @@ let mapStateToProps = state => {
 	}
 }
 
-let mapDispatchToProps = (dispatch) => {
-	return {
-		updateNewPostText: (newText) => {
-			dispatch(onPostTextChangeAC(newText));
-		},
-		onAddPost: () => {
-			dispatch(addPostAC());
-		}
-	}
-}
-
-const AddPostContainer = connect(mapStateToProps, mapDispatchToProps)(AddPost);
+const AddPostContainer = connect(mapStateToProps, {
+	onPostTextChange,
+	onAddPost
+})(AddPost);
 
 
 export default AddPostContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './UserCard.module.scss';
-import {followAC, unfollowAC} from "../../../../redux/reducers/users-reducer";
+import {follow, unfollow} from "../../../../redux/reducers/users-reducer";
 import {connect} from 'react-redux';
 import UserAvatar from "../../UserAvatar/UserAvatar";
 import Btn from "../../../Common/Buttons/Btn";
@@ -28,13 +28,8 @@ let mapStateToProps = (state) => {
 	return {}
 }
 
-let mapDispatchToProps = (dispatch) => {
-	return {
-		follow: (id) => { dispatch(followAC(id)) },
-		unfollow: (id) => { dispatch(unfollowAC(id)) }
-	}
-}
-
-const UserCard = connect(mapStateToProps, mapDispatchToProps)(UserCardInner);
+const UserCard = connect(mapStateToProps, {
+	follow, unfollow
+})(UserCardInner);
 
 export default UserCard;

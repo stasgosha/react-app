@@ -19,10 +19,6 @@ let mstp = (state) => {
     }
 }
 
-let mdtp = (dispatch) => {
-    return {}
-}
-
-const PostListContainer = connect(mstp, mdtp)(PostsList);
+const PostListContainer = connect(mstp, {})(PostsList);
 
 export default PostListContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setPageAC, setTotalCountAC, setUsersAC, toggleIsFetchingAC} from "../../../redux/reducers/users-reducer";
+import {setPage, setTotalCount, setUsers, toggleIsFetching} from "../../../redux/reducers/users-reducer";
 import * as axios from 'axios';
 import UsersInner from "./UsersInner";
 
@@ -52,23 +52,8 @@ let mapStateToProps = (state) => {
 	}
 }
 
-let mapDispatchToProps = (dispatch) => {
-	return {
-		setUsers: (users) => {
-			dispatch(setUsersAC(users));
-		},
-		setPage: (page) => {
-			dispatch(setPageAC(page));
-		},
-		setTotalCount: (totalCount) => {
-			dispatch(setTotalCountAC(totalCount));
-		},
-		toggleIsFetching: (isFetching) => {
-			dispatch(toggleIsFetchingAC(isFetching));
-		}
-	}
-}
-
-const Users = connect(mapStateToProps, mapDispatchToProps)(UsersAPIComponent);
+const Users = connect(mapStateToProps, {
+	setUsers, setPage, setTotalCount, toggleIsFetching
+})(UsersAPIComponent);
 
 export default Users;

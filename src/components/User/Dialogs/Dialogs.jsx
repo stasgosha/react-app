@@ -3,7 +3,7 @@ import s from './Dialogs.module.scss';
 
 import DialogPreview from "./DialogPreview/DialogPreview";
 import ConversationContainer from "./Conversation/ConversationContainer";
-import {addPostAC, onPostTextChangeAC} from "../../../redux/reducers/profile-reducer";
+import {onAddMessage, onMessageTextChange} from "../../../redux/reducers/dialogs-reducer";
 import {connect} from "react-redux";
 
 const Dialogs = ({dialogPreviews, ...props}) => {
@@ -43,17 +43,8 @@ let mstp = state => {
 	}
 }
 
-let mdtp = dispatch => {
-	return {
-		updateNewPostText: (newText) => {
-			dispatch(onPostTextChangeAC(newText));
-		},
-		onAddPost: () => {
-			dispatch(addPostAC());
-		}
-	}
-}
-
-const DialogsContainer = connect(mstp, mdtp)(Dialogs);
+const DialogsContainer = connect(mstp, {
+	onAddMessage, onMessageTextChange
+})(Dialogs);
 
 export default DialogsContainer;

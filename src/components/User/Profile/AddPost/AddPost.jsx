@@ -12,7 +12,7 @@ const AddPost = (props) => {
 	const onPostTextChange = () => {
 		let newText = newPostTextarea.current.value;
 		debugger;
-		props.updateNewPostText(newText);
+		props.onPostTextChange(newText);
 	}
 
 	const onEnterPress = (e) => {

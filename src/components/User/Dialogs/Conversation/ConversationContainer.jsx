@@ -1,5 +1,5 @@
 import React from 'react';
-import {onAddMessageAC, onMessageTextChangeAC} from "../../../../redux/reducers/dialogs-reducer";
+import {onAddMessage, onMessageTextChange} from "../../../../redux/reducers/dialogs-reducer";
 import Conversation from "./Conversation";
 import {connect} from "react-redux";
 
@@ -9,13 +9,8 @@ let mapStateToProps = (state) => {
 	}
 }
 
-let mapDispatchToProps = (dispatch) => {
-	return {
-		addMessage: messageText => dispatch(onAddMessageAC(messageText)),
-		messageTextChange: newText => dispatch(onMessageTextChangeAC(newText))
-	}
-}
-
-const ConversationContainer = connect(mapStateToProps, mapDispatchToProps)(Conversation);
+const ConversationContainer = connect(mapStateToProps, {
+	onAddMessage,onMessageTextChange
+})(Conversation);
 
 export default ConversationContainer;

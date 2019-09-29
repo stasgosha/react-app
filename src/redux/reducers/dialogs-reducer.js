@@ -100,13 +100,13 @@ const dialogsReducer = (state = initialState, action) => {
 	}
 }
 
-export const onAddMessageAC = message => ({
+export const onAddMessage = message => ({
 	type: SEND_MESSAGE,
 	messageText: message,
 	messageTime: new Date().getTime()
 })
 
-export const onMessageTextChangeAC = newMessage => ({
+export const onMessageTextChange = newMessage => ({
 	type: MESSAGE_TEXT_CHANGE,
 	newMessage: newMessage
 })

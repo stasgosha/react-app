@@ -14,12 +14,12 @@ const Conversation = ({dialogsPage, ...props}) => {
 	let newMessage = React.createRef();
 
 	const onAddMessage = () => {
-		props.addMessage(newMessage.current.value);
+		props.onAddMessage(newMessage.current.value);
 	}
 
 	const onMessageTextChange = (e) => {
 		let newText = newMessage.current.value;
-		props.messageTextChange(newText);
+		props.onMessageTextChange(newText);
 	}
 
 	const onEnterPress = (e) => {
