@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
 	postsList: [
@@ -20,13 +21,14 @@ let initialState = {
 			message: "Maiores rerum odit nostrum doloribus. Voluptatibus ducimus adipisci, quibusdam iure!"
 		}
 	],
-	newPostText: ''
+	newPostText: '',
+	profile: null
 }
 
 const profileReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_POST:
-			if(state.newPostText.trim() === '') return state;
+			if (state.newPostText.trim() === '') return state;
 
 			let newPost = {
 				avatar: action.avatar,
@@ -45,19 +47,19 @@ const profileReducer = (state = initialState, action) => {
 				newPostText: action.newText
 			}
 
+		case SET_USER_PROFILE:
+			return {
+				...state,
+				profile: action.profile
+			}
+
 		default:
 			return state;
 	}
 }
 
-export const onAddPost = () => ({
-	type: ADD_POST,
-	avatar: '//placeimg.com/100/100/people?v=1'
-})
-
-export const onPostTextChange = newText => ({
-	type: UPDATE_NEW_POST_TEXT,
-	newText: newText
-})
+export const onAddPost = () => ({type: ADD_POST, avatar: '//placeimg.com/100/100/people?v=1'})
+export const onPostTextChange = newText => ({type: UPDATE_NEW_POST_TEXT, newText: newText})
+export const setUserProfile = profile => ({type: SET_USER_PROFILE, profile})
 
 export default profileReducer;

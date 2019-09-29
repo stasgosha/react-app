@@ -4,6 +4,7 @@ import {follow, unfollow} from "../../../../redux/reducers/users-reducer";
 import {connect} from 'react-redux';
 import UserAvatar from "../../UserAvatar/UserAvatar";
 import Btn from "../../../Common/Buttons/Btn";
+import {NavLink} from "react-router-dom";
 
 const UserCardInner = ({user, ...props}) => {
 	let onFollowClick = () => {
@@ -11,9 +12,9 @@ const UserCardInner = ({user, ...props}) => {
 	}
 
 	return <div className={s.userCard}>
-		<div className={s.cardAvatar}>
+		<NavLink className={s.cardAvatar} to={`/profile/${user.id}`}>
 			<UserAvatar size={"large"} src={user.photos.large} isOnline={false} />
-		</div>
+		</NavLink>
 		<div className={s.cardContent}>
 			<div className={`${s.userName} tpg-h4`}>{user.name}</div>
 			<div className={`${s.userStatus} tpg-body-1`}>{user.status}</div>

@@ -5,20 +5,22 @@ import UserAvatar from "../UserAvatar/UserAvatar";
 import UserInfo from "../UserInfo/UserInfo";
 import PostListContainer from "./PostsList/PostsList";
 import AddPostContainer from "./AddPost/AddPostContainer";
+import Preloader from "../../Common/Preloader/Preloader";
 
-const Profile = (props) => {
+const Profile = ({profile, ...props}) => {
+    if(!profile) return <Preloader/>
     return (
-        <div className={s.Profile}>
+		<div className={s.Profile}>
             <section className={`${s.mainInfo} white-card`}>
                 <div className={s.profileImageWrapper}>
                     <ProfileImage src={"//placeimg.com/1000/300/nature"} />
                 </div>
                 <div className={s.profileUserInfo}>
                     <div className={s.avatar}>
-                        <UserAvatar src={"//placeimg.com/220/220/people"} size={"big"} />
+                        <UserAvatar src={profile.photos.large } size={"big"} />
                     </div>
                     <div className={s.content}>
-                        <UserInfo/>
+                        <UserInfo profile={profile} />
                     </div>
                 </div>
             </section>

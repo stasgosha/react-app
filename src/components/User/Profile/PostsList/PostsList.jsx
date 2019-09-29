@@ -4,7 +4,7 @@ import Post from "./Post/Post";
 import {connect} from "react-redux";
 
 const PostsList = (props) => {
-    const showPosts = (data) => data.map(post => <Post data={post} />);
+    const showPosts = (data) => data.map(post => <Post data={post} key={post.avatar} />);
 
     return (
         <div className={s.PostsList}>
